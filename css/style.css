@@ -4,18 +4,19 @@
     box-sizing: border-box;
 }
 
-body,html{
-    padding: 0;
-    margin: 0;
-}
 #curriculum{
     margin:20px;
     padding:10px;
 }
 h2{
-    margin:10px 0px 20px;
+    margin:10px 0px 15px;
+    padding-bottom:5px;
     font-size: 1.1rem;
     text-transform: uppercase;
+    border-bottom:2px solid black;
+}
+.adicionales h2{
+    margin:10px 0px 10px;
 }
 .empresa, 
 .establecimiento {
@@ -41,7 +42,7 @@ h2{
 .exp-item,
 .form-item{
     position:relative;
-    padding-left:50px;
+    padding-left:29px;
     padding-bottom:25px;
 }
 .exp-item:last-child .timeline_linea,
@@ -51,7 +52,7 @@ h2{
 .exp-item h3,
 .form-item h3{
     margin:0px 0px 15px 0px;
-    line-height:0px;
+    line-height:10px;
 }
 p.texto{
     margin:5px 0px 0px 0px;
@@ -88,4 +89,30 @@ p.estado{
     background-color: white;
     border-radius:16px;
     z-index:99;
+}
+.adicionales{
+    display:flex;
+    flex-direction: column;
+    gap:5px;
+}
+.ad-item{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+.perfil h1{
+    margin-bottom:0px;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.perfil{
+    padding: 30px 0px 30px 10px;
+    margin-bottom: 20px;
+    margin-left: -10px;
+    background-color: #ddd;
+}
+.perfil p{
+    text-transform: uppercase;
 }
