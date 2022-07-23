@@ -1,0 +1,76 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+body,html{
+    padding: 0;
+    margin: 0;
+}
+#curriculum{
+    margin:20px;
+    padding:10px;
+}
+h2{
+    margin:10px 0px 20px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+.empresa {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.empresa h4, .empresa p{
+    margin:5px 0px;
+}
+
+.empresa h4{
+    text-transform: uppercase;
+    font-size: .8rem;
+    font-weight: 400;
+}
+.exp-item{
+    position:relative;
+    padding-left:50px;
+    padding-bottom:25px;
+}
+.exp-item:last-child .timeline_linea{
+    display:none;
+}
+.exp-item h3{
+    margin:0px 0px 15px 0px;
+    line-height:0px;
+}
+p.texto{
+    margin:5px 0px 0px 0px;
+}
+.timeline_linea{
+    height:100%;
+    width:4px;
+    background-color: black;
+    position:absolute;
+    left:3px;
+    top:0px;
+}
+.timeline_circulo{
+    position:absolute;
+    width:10px;
+    height:10px;
+    top:0px;
+    left:0px;
+    background-color: black;
+    border-radius:16px;
+    z-index:999;
+}
+.timeline_circulo_back{
+    position:absolute;
+    width:16px;
+    height:16px;
+    top:-3px;
+    left:-3px;
+    background-color: white;
+    border-radius:16px;
+    z-index:99;
+}
