@@ -3,6 +3,7 @@
     padding:0px;
     box-sizing: border-box;
 }
+
 body,html{
     padding: 0;
     margin: 0;
@@ -16,42 +17,56 @@ h2{
     font-size: 1.1rem;
     text-transform: uppercase;
 }
-.empresa {
+.empresa, 
+.establecimiento {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 
-.empresa h4, .empresa p{
+.empresa h4, 
+.establecimiento h4,
+.empresa p{
     margin:5px 0px;
 }
 
-.empresa h4{
+.empresa h4,
+.establecimiento h4{
     text-transform: uppercase;
     font-size: .8rem;
     font-weight: 400;
 }
-.exp-item{
+
+.exp-item,
+.form-item{
     position:relative;
     padding-left:50px;
     padding-bottom:25px;
 }
-.exp-item:last-child .timeline_linea{
+.exp-item:last-child .timeline_linea,
+.form-item:last-child .timeline_linea{
     display:none;
 }
-.exp-item h3{
+.exp-item h3,
+.form-item h3{
     margin:0px 0px 15px 0px;
     line-height:0px;
 }
 p.texto{
     margin:5px 0px 0px 0px;
 }
+p.estado{
+    margin:0px;
+    text-transform: uppercase;
+    font-size: .8rem;
+}
 .timeline_linea{
     height:100%;
-    width:4px;
+    width:2px;
     background-color: black;
     position:absolute;
-    left:3px;
+    left:4px;
     top:0px;
 }
 .timeline_circulo{
