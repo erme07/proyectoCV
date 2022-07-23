@@ -1,0 +1,105 @@
+
+body,html{
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+.timeline_linea {
+    position: absolute;
+    height: 100%;
+    width: 0.3rem;
+    background: #000;
+    left: 2.1rem;
+    top: 2.5rem;
+    opacity: .2;
+}
+.experiencialaboral :last-child .timeline_linea {
+    display: none;
+}
+
+.sortable .cuadro {
+    padding: 0.5rem 0.5rem 0.5rem 3.5rem;
+    position: relative;
+}
+
+.timeline_bola {
+    width: 1rem;
+    height: 1rem;
+    background: #000;
+    border-radius: 3rem;
+    z-index: 1;
+    left: -1.75rem;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    text-align: center;
+}
+.timeline_bola_border {
+    content: "";
+    width: 2rem;
+    height: 2rem;
+    background: #ea2121;
+    display: block;
+    top: -0.5rem;
+    left: -0.5rem;
+    position: absolute;
+    text-align: center;
+    border-radius: 2rem;
+    /* border: 0.5rem solid #fff; */
+    background: 0 0;
+}
+
+.titulo2 {
+    font-size: 1.2rem;
+    /*line-height: 1.25;
+    padding: 0.5rem;*/
+    margin: 0;
+}
+#experiencialaboral .titulo3, #formacionacademica .titulo3 {
+    width: fit-content;
+    display: inline-block;
+    max-width: 100%;
+    text-transform: uppercase;
+}
+.titulo3 {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    padding: 0.5rem;
+    margin: 0;
+}
+
+.fecha {
+    position: relative;
+    text-align: left;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.6;
+    padding: 0.5rem;
+    display: inline-block;
+    margin: 0;
+    margin-top: -0.5rem;
+    margin-left: 0.5rem;
+    min-width: fit-content;
+    display: inline-block;
+    /*float: right;*/
+    position: absolute;
+    right: 0;
+    right: 0.5rem;
+}
+.experiencialaboral .texto {
+    margin-top: -0.5rem!important;
+    text-align: justify;
+    text-align: left;
+    width: 100%!important;
+    line-height: 1.6;
+    font-weight: 400;
+    padding: 0.5rem;
+    text-transform: none!important;
+    display: inline-block;
+    color: #242424;
+}
