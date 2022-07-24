@@ -39,7 +39,7 @@ h1,h2,h3,h4,p{
 h2{
     margin:0px 0px 15px;
     padding-bottom:5px;
-    font-size: 1rem;
+    font-size: .9rem;
     text-transform: uppercase;
     border-bottom:2px solid black;
 }
@@ -63,7 +63,7 @@ h2{
 .empresa h4,
 .establecimiento h4{
     text-transform: uppercase;
-    font-size: .9rem;
+    font-size: .8rem;
     font-weight: 400;
 }
 
@@ -71,27 +71,35 @@ h2{
 .form-item{
     position:relative;
     padding-left:25px;
-    padding-bottom:20px;
+    padding-bottom:15px;
 }
 .exp-item:last-child .timeline_linea,
 .form-item:last-child .timeline_linea{
     display:none;
 }
 .exp-item h3,
-.form-item h3{
+.form-item h3,
+.lateral h3{
     margin:0px 0px 10px 0px;
     line-height:10px;
-    font-size: 1rem;
+    font-size: .9rem;
+}
+.lateral h3{
+    font-size: 0.8rem;
 }
 p.texto{
     margin:5px 0px 0px 0px;
-    font-size: .9rem;
-    line-height: 1.1rem;
+    font-size: .8rem;
+    line-height: .9rem;
+}
+
+.fecha{
+    font-size:.8rem;
 }
 p.estado{
     margin:0px;
     text-transform: uppercase;
-    font-size: .8rem;
+    font-size: .7rem;
 }
 .timeline_linea{
     height:100%;
@@ -124,7 +132,6 @@ p.estado{
 .adicionales{
     display:flex;
     flex-direction: column;
-    gap:5px;
 }
 .ad-item{
     display:flex;
@@ -148,7 +155,49 @@ p.estado{
 .perfil p{
     text-transform: uppercase;
 }
+.avatar p,
+.social-links p{
+    font-size: .8rem;
+    line-height: 1rem;
+}
 
+.lateral section{
+    padding-bottom:20px;
+}
+
+.lateral h3{
+    border-bottom: 2px solid #ffcb00;
+    padding-bottom: 5px;
+    line-height: unset;
+    text-transform: uppercase;
+}
+.social-links{
+    display:flex;
+    flex-direction: column;
+    gap:5px;
+}
+.social-item{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    gap:15px;
+}
+.social-item i{
+    font-size: 1.5rem;
+}
+
+.data-item p:first-child{
+    text-transform: uppercase;
+}
+.data-item p:last-child{
+    margin-bottom: 8px;
+}
+.data-item:last-child p{
+    margin-bottom:0px;
+}
+.data-item p{
+    font-size: .8rem;
+}
 @media print {
     #curriculum{
         margin:0px;
