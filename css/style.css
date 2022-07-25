@@ -17,24 +17,25 @@ h1,h2,h3,h4,p{
 }
 
 #curriculum{
-    margin:20px 50px;
+    margin:20px auto;
+    width:797px;
+    height:1123px;
     /*padding:10px;*/
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    grid-template-areas: "lateral principal principal";
 }
 
 .lateral { 
-    grid-area: 1 / 1 / 2 / 2;
+    grid-area: lateral;
     padding:20px;
     background-color: #222126;
     color:white;
 }
 .principal { 
-    grid-area: 1 / 2 / 2 / 3;
-    padding:20px 40px;
+    grid-area: principal;
+    padding:20px 20px;
 }
 h2{
     margin:0px 0px 15px;
@@ -47,7 +48,8 @@ h2{
     margin:0px 0px 10px;
 }
 .empresa, 
-.establecimiento {
+.establecimiento,
+.titulo {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -88,7 +90,7 @@ h2{
     font-size: 0.8rem;
 }
 p.texto{
-    margin:5px 0px 0px 0px;
+    margin:3px 0px 0px 0px;
     font-size: .8rem;
     line-height: .9rem;
 }
@@ -141,19 +143,20 @@ p.estado{
 }
 .perfil h1{
     margin-bottom:0px;
-    font-size: 2rem;
+    font-size: 1.7rem;
     text-transform: uppercase;
 }
 
 .perfil{
-    padding: 20px 0px 20px 40px;
+    padding: 15px 0px 15px 20px;
     margin-bottom: 20px;
-    margin-left: -40px;
+    margin-left: -20px;
     width:80%;
     background-color: #ffcb00;
 }
 .perfil p{
     text-transform: uppercase;
+    font-size: .8rem;
 }
 .avatar p,
 .social-links p{
@@ -183,7 +186,7 @@ p.estado{
     gap:15px;
 }
 .social-item i{
-    font-size: 1.5rem;
+    font-size: 1.1rem;
 }
 
 .data-item p:first-child{
@@ -198,7 +201,41 @@ p.estado{
 .data-item p{
     font-size: .8rem;
 }
+.contact-item{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom:8px;
+    gap:10px;
+}
+.contact-item p{
+    font-size: .8rem;
+}
+.contact-item i{
+    font-size: 1rem;
+}
+
+.avatar img{
+    max-width:100%;
+}
+
+.avatar img{
+	width: 100%;
+	height: auto;
+}
+@supports(object-fit: cover){
+	.avatar img{
+	  height: 100%;
+	  object-fit: cover;
+	  object-position: center center;
+	}
+}
 @media print {
+    @page {
+        size: A4 portrait;
+        margin:0px;
+    }
+    
     #curriculum{
         margin:0px;
         height:100vh;
