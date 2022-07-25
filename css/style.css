@@ -216,19 +216,18 @@ p.estado{
 }
 
 .avatar img{
-    max-width:100%;
+    width:80%;
+    margin-bottom: 20px;
+    clip-path: ellipse(47% 50% at 50% 50%);
 }
+.avatar figure{
+    text-align: center;
+}
+.qr img{
+    width:160px;
+    display: block;
+    margin:15px auto;
 
-.avatar img{
-	width: 100%;
-	height: auto;
-}
-@supports(object-fit: cover){
-	.avatar img{
-	  height: 100%;
-	  object-fit: cover;
-	  object-position: center center;
-	}
 }
 @media print {
     @page {
