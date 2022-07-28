@@ -1,7 +1,6 @@
 *{
-    margin:0px;
-    padding:0px;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 body{
@@ -10,10 +9,6 @@ body{
 
 main{
     background-color: white;
-}
-
-h1,h2,h3,h4,p{
-    font-family: 'Poppins', sans-serif;
 }
 
 #curriculum{
@@ -32,12 +27,15 @@ h1,h2,h3,h4,p{
     background-color: #222126;
     color:white;
 }
+.lateral p{
+    color:#ebebeb;
+}
 .principal { 
     grid-area: principal;
     padding:20px 20px;
 }
 h2{
-    margin:0px 0px 15px;
+    margin:0px 0px 8px;
     padding-bottom:5px;
     font-size: .9rem;
     text-transform: uppercase;
@@ -54,11 +52,16 @@ h2{
     justify-content: space-between;
     align-items: center;
 }
+.empresa{
+    margin-top: -0.2rem;
+}
 
 .empresa h4, 
 .establecimiento h4,
-.empresa p{
+.empresa p,
+.titulo p{
     margin:0px;
+    padding:.3rem .5rem;
 }
 
 .empresa h4,
@@ -66,32 +69,39 @@ h2{
     text-transform: uppercase;
     font-size: .8rem;
     font-weight: 400;
+    padding:.3rem .5rem;
+    margin:0px;
 }
 
 .exp-item,
 .form-item{
     position:relative;
-    padding-left:25px;
-    padding-bottom:15px;
+    padding-left:1.5rem;;
+    padding-bottom:2px;
+    padding-top:2px;
 }
+.exp-item:hover,
+.form-item:hover{
+    outline:dashed 2px rgb(182, 182, 182);
+}
+
 .exp-item:last-child .timeline_linea,
 .form-item:last-child .timeline_linea{
     display:none;
 }
 .exp-item h3,
-.form-item h3,
-.lateral h3{
-    margin:0px 0px 10px 0px;
-    line-height:10px;
+.form-item h3{
+    margin:0px;
+    /*line-height:10px;*/
     font-size: .9rem;
-}
-.lateral h3{
-    font-size: 0.8rem;
+    padding:.3rem .5rem;
 }
 p.texto{
-    margin:3px 0px 0px 0px;
+    margin:0px;
+    margin-top:-.2rem;
+    padding:.3rem .5rem;
     font-size: .8rem;
-    line-height: .9rem;
+    /*line-height: .9rem;*/
 }
 
 .fecha{
@@ -101,33 +111,33 @@ p.estado{
     margin:0px;
     text-transform: uppercase;
     font-size: .7rem;
+    padding: 0.3rem 0.5rem;
 }
 .timeline_linea{
     height:100%;
     width:2px;
     background-color: black;
     position:absolute;
-    left:4px;
-    top:0px;
+    left:10px;
+    top:.425rem;
 }
 .timeline_circulo{
     position:absolute;
-    width:10px;
-    height:10px;
-    top:0px;
-    left:0px;
-    background-color: black;
+    width:16px;
+    height:16px;
+    top:.425rem;
+    left:3px;
+    background-color: white;
     border-radius:16px;
     z-index:999;
 }
-.timeline_circulo_back{
+.timeline_circulo::after{
+    font: var(--fa-font-solid);
+    content: "\f192";
+    font-size: 10px;
     position:absolute;
-    width:16px;
-    height:16px;
-    top:-3px;
-    left:-3px;
-    background-color: white;
-    border-radius:16px;
+    top:3px;
+    left:3px;
     z-index:99;
 }
 .adicionales{
@@ -140,38 +150,62 @@ p.estado{
     align-items: center;
     gap: 15px;
 }
+.ad-item p{
+    margin:0px;
+    padding:.3rem .5rem;
+    font-size: .8rem;
+}
+.ad-item:hover{
+    outline:dashed 2px rgb(182, 182, 182);
+}
 .perfil h1{
-    margin-bottom:0px;
+    margin: 0px 0px 0px -0.5rem;
     font-size: 1.7rem;
     text-transform: uppercase;
+    padding: 0.1rem 0.5rem;
 }
 
 .perfil{
-    padding: 15px 0px 15px 20px;
+    padding: 10px 12px 10px 20px;
     margin-bottom: 20px;
     margin-left: -20px;
-    width:80%;
+    display: inline-block;
     background-color: #ffcb00;
 }
-.perfil p{
+
+.perfil h1:hover,
+.perfil p:hover{
+    outline:dashed 2px rgb(182, 182, 182);
+}
+.perfil p {
     text-transform: uppercase;
     font-size: .8rem;
+    margin: 0px 0px 0px -.5rem;
+    padding: .2rem .5rem;
 }
 .avatar p,
 .social-links p{
     font-size: .8rem;
     line-height: 1rem;
+    margin: -0.3rem -0.5rem;
+    padding: 0.3rem 0.5rem;
 }
 
 .lateral section{
-    padding-bottom:20px;
+    padding: .3rem 0.5rem;
+    margin: 0px -0.5rem 5px -.5rem;
+}
+.lateral section:hover{
+    outline:dashed 2px rgb(182, 182, 182);
 }
 
 .lateral h3{
     border-bottom: 2px solid #ffcb00;
-    padding-bottom: 5px;
-    line-height: unset;
     text-transform: uppercase;
+    font-size: 0.8rem;
+    padding-bottom:5px;
+    margin:0px 0px 8px;
+
 }
 .social-links{
     display:flex;
@@ -193,22 +227,26 @@ p.estado{
 }
 .data-item p:last-child{
     margin-bottom: 8px;
+    margin-left: -0.3rem;
+    padding: 0.3rem;
 }
 .data-item:last-child p{
     margin-bottom:0px;
 }
 .data-item p{
     font-size: .8rem;
+    margin:0px;
 }
 .contact-item{
     display:flex;
     flex-direction: row;
     align-items: center;
-    margin-bottom:8px;
     gap:10px;
 }
 .contact-item p{
     font-size: .8rem;
+    margin:0px;
+    padding:.3rem;
 }
 .contact-item i{
     font-size: 1rem;
@@ -219,6 +257,9 @@ p.estado{
     margin-bottom: 20px;
     clip-path: ellipse(47% 50% at 50% 50%);
 }
+figure{
+    margin:0px;
+}
 .avatar figure{
     text-align: center;
 }
@@ -227,6 +268,24 @@ p.estado{
     display: block;
     margin:15px auto;
 
+}
+[contenteditable=true]{
+    cursor:text;
+    user-select: text;
+    outline:none;
+}
+
+[contenteditable=true]:empty::before{
+    content: attr(placeholder);
+    color:grey;
+}
+[contenteditable=true]:focus{
+    background-color: rgba(0, 0, 0, 0.144);
+}
+
+section.experiencias,
+section.formacion{
+    margin-bottom:10px;
 }
 @media print {
     @page {
