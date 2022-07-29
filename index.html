@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
     <script src="https://kit.fontawesome.com/768709101c.js" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
 </head>
 
 <body>
@@ -19,7 +20,13 @@
             <aside class="lateral">
                 <section class="avatar">
                     <figure>
-                        <img contenteditable="true" src="img/avatar placeholder.jpg" alt="">
+                        <i class="fa-solid fa-user-pen editFoto" onclick="mostrarPanel()"></i>
+                        <img id="foto" src="img/avatar placeholder.jpg" alt="">
+                        <div id="Panel" style="display:none;"class="select-link">
+                            <label for="linkFoto">Link de la foto: </label>
+                            <input type="text" id="linkFoto" > 
+                            <button type="button"  onclick="getLink()">Subir</button>
+                        </div>
                     </figure>
                     <h3>perfil</h3>
                     <p contenteditable="true" placeholder="Ingrese su perfil profesional. Esto es lo primero que leerá un posible empleador y debe brindarle una descripción general de tus habilidades y experiencia. Un buen perfil debe ser conciso y directo."></p>
