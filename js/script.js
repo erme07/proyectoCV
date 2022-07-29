@@ -1,3 +1,7 @@
+window.onbeforeunload = function() {
+  return 'You have unsaved changes!';
+};
+
 function previewFile() {
     const preview = document.getElementById('fotoPerfil');
     const file = document.querySelector('input[type=file]').files[0];
