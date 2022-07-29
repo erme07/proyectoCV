@@ -257,8 +257,27 @@ p.estado{
     margin-bottom: 20px;
     clip-path: ellipse(47% 50% at 50% 50%);
 }
+.avatar label{
+    display: block;
+    margin-bottom: 5px;
+}
+.avatar button{
+    margin-top:5px;
+}
+.editFoto{
+    position:absolute;
+    top:0;
+    right:10%;
+}
+.select-link{
+    position:absolute;
+    padding:.5rem 0px;
+    background-color:rgba(0, 0, 0, 0.616);
+    bottom:0;
+}
 figure{
     margin:0px;
+    position:relative;
 }
 .avatar figure{
     text-align: center;
@@ -292,7 +311,11 @@ section.formacion{
         size: A4 portrait;
         margin:0px;
     }
-    
+    .avatar label,
+    .avatar input,
+    .avatar button{
+        display:none;
+    }
     #curriculum{
         margin:0px;
         height:100vh;
