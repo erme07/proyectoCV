@@ -1,16 +1,14 @@
+function previewFile() {
+    const preview = document.getElementById('fotoPerfil');
+    const file = document.querySelector('input[type=file]').files[0];
+    const reader = new FileReader();
 
-const getLink = () =>{
-    let inputLink = document.getElementById("linkFoto").value; 
-    document.getElementById("foto").src=inputLink;
-  }
-  var cont=0;
-  const mostrarPanel = () =>{
-    
-    cont++;
-    if(cont==1){
-        document.getElementById("Panel").style.display = ''; // hide
-    }
-    else{
-        document.getElementById("Panel").style.display = 'none'; // hide
+    reader.addEventListener("load", function () {
+      // convierte la imagen a una cadena en base64
+    preview.src = reader.result;
+    }, false);
+
+    if (file) {
+    reader.readAsDataURL(file);
     }
 }

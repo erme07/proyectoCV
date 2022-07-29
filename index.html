@@ -20,13 +20,11 @@
             <aside class="lateral">
                 <section class="avatar">
                     <figure>
-                        <i class="fa-solid fa-user-pen editFoto" onclick="mostrarPanel()"></i>
-                        <img id="foto" src="img/avatar placeholder.jpg" alt="">
-                        <div id="Panel" style="display:none;"class="select-link">
-                            <label for="linkFoto">Link de la foto: </label>
-                            <input type="text" id="linkFoto" > 
-                            <button type="button"  onclick="getLink()">Subir</button>
+                        <div title="Clic aquí para subir tu avatar" class="input-container">
+                            <i class="fa-solid fa-user-pen"></i>
+                            <input type="file" accept="image/png, image/jpeg, image/jpg" onchange="previewFile()"/>
                         </div>
+                        <img id="fotoPerfil" src="img/avatar placeholder.jpg">
                     </figure>
                     <h3>perfil</h3>
                     <p contenteditable="true" placeholder="Ingrese su perfil profesional. Esto es lo primero que leerá un posible empleador y debe brindarle una descripción general de tus habilidades y experiencia. Un buen perfil debe ser conciso y directo."></p>
@@ -201,9 +199,11 @@
                         <p contenteditable="true" placeholder="Habilidad - Pretencion- Disponibilidad"></p>
                     </div>
                 </section>
+                
             </div>
             
     </main>
+
 </body>
 
 </html>
