@@ -8,6 +8,7 @@ body{
 }
 
 main{
+    grid-area: main;
     background-color: white;
 }
 
@@ -307,16 +308,17 @@ section.formacion{
     margin-bottom:10px;
 }
 .input-container {
-    padding: 4px;
+    /* padding: 4px; */
     overflow: hidden;
     position: absolute;
-    color: white;
+    color: green;
     cursor: pointer;
-    border: 2px solid white;
-    border-radius: 20px;
+    font-size: 1.5rem;
+    /* border: 2px solid white;
+    border-radius: 20px; */
     display: inline-block;
     top: 0;
-    right: 0;
+    right: 10px;
   }
   
   .input-container [type=file] {
@@ -332,10 +334,21 @@ section.formacion{
     text-align: right;
     top: 0;
   }
+.modulo-header{
+    position:relative;
+}
+.control{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
 @media print {
     @page {
         size: A4 portrait;
         margin:0px;
+    }
+    body{
+        display:unset;
     }
     .exp-item:hover,
     .form-item:hover,
@@ -345,11 +358,11 @@ section.formacion{
     .lateral section:hover{
         outline:none;
     }
-
     .avatar label,
     .avatar input,
     .avatar button,
-    .input-container{
+    .input-container,
+    .control{
         display:none;
     }
     #curriculum{

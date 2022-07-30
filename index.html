@@ -17,11 +17,11 @@
 
 <body>
     <main id="curriculum">
-            <aside class="lateral">
+            <div class="lateral">
                 <section class="avatar">
                     <figure>
-                        <div title="Clic aquí para subir tu avatar" class="input-container">
-                            <i class="fa-solid fa-user-pen"></i>
+                        <div title="Clic aquí para subir una foto" class="input-container">
+                            <i class="fa-solid fa-square-pen"></i>
                             <input type="file" accept="image/png, image/jpeg, image/jpg" onchange="previewFile()"/>
                         </div>
                         <img id="fotoPerfil" src="img/avatar placeholder.jpg">
@@ -75,25 +75,20 @@
                         <img src="img/contacto-qr.png" alt="">
                     </figure>
                 </section>
-            </aside>
+            </div>
             <div class="principal">
                 <section class="perfil">
                     <h1 contenteditable="true" placeholder="Nombre y Apellido"></h1>
-                    <p contenteditable="true" placeholder="Titulo o Especialidad"></p>
+                    <p contenteditable="true" placeholder="Profesion o Especialidad"></p>
                     
                 </section>
-                <section class="experiencias">
-                    <h2>Experiencias Previas</h2>
-                    <div class="exp-item">
-                        <div class="timeline_circulo"></div>
-                        <h3 class="puesto" contenteditable="true" placeholder="Puesto Laboral"></h3>
-                        <div class="empresa">
-                            <h4 contenteditable="true" placeholder="Empleador"></h4>
-                            <p class="fecha" contenteditable="true" placeholder="Desde-Hasta"></p>
+                <section id="exp" class="experiencias">
+                    <div class="modulo-header">
+                        <h2>Experiencias Previas</h2>
+                        <div class="control">
+                            <i style="cursor:pointer;color:green;" onclick="addElemento('#exp');" class="fa-solid fa-circle-plus"></i>
+                            <i style="cursor:pointer;color:red;" onclick="restElemento('#exp');" class="fa-solid fa-circle-minus"></i>
                         </div>
-                        
-                        <p class="texto" contenteditable="true" placeholder="Ingresa la descripción de su experiencia laboral. Incluya información relevante que demuestre a los empleadores potenciales cómo ha agregado valor en roles anteriores. Escribe sobre tus"></p>
-                        <div class="timeline_linea"></div>
                     </div>
                     <div class="exp-item">
                         <div class="timeline_circulo"></div>
@@ -106,43 +101,17 @@
                         <p class="texto" contenteditable="true" placeholder="Ingresa la descripción de su experiencia laboral. Incluya información relevante que demuestre a los empleadores potenciales cómo ha agregado valor en roles anteriores. Escribe sobre tus"></p>
                         <div class="timeline_linea"></div>
                     </div>
-                    <div class="exp-item">
-                        <div class="timeline_circulo"></div>
-                        <h3 class="puesto" contenteditable="true" placeholder="Puesto Laboral"></h3>
-                        <div class="empresa">
-                            <h4 contenteditable="true" placeholder="Empleador"></h4>
-                            <p class="fecha" contenteditable="true" placeholder="Desde-Hasta"></p>
-                        </div>
-                        
-                        <p class="texto" contenteditable="true" placeholder="Ingresa la descripción de su experiencia laboral. Incluya información relevante que demuestre a los empleadores potenciales cómo ha agregado valor en roles anteriores. Escribe sobre tus"></p>
-                        <div class="timeline_linea"></div>
-                    </div>
-                    <div class="exp-item">
-                        <div class="timeline_circulo"></div>
-                        <h3 class="puesto" contenteditable="true" placeholder="Puesto Laboral"></h3>
-                        <div class="empresa">
-                            <h4 contenteditable="true" placeholder="Empleador"></h4>
-                            <p class="fecha" contenteditable="true" placeholder="Desde-Hasta"></p>
-                        </div>
-                        
-                        <p class="texto" contenteditable="true" placeholder="Ingresa la descripción de su experiencia laboral. Incluya información relevante que demuestre a los empleadores potenciales cómo ha agregado valor en roles anteriores. Escribe sobre tus"></p>
-                        <div class="timeline_linea"></div>
-                    </div>
+                    
                 </section>
                 
-                <section class="formacion">
-                    <h2>Formacion academica</h2>
-                    <div class="form-item">
-                        <div class="timeline_circulo"></div>
-                        <div class="titulo">
-                            <h3 class="especialidad" contenteditable="true" placeholder="Especialidad o Carrera"></h3>
-                            <p class="fecha" contenteditable="true" placeholder="Desde-Hasta"></p>
+                <section id="form" class="formacion">
+                    
+                    <div class="modulo-header">
+                        <h2>Formacion academica</h2>
+                        <div class="control">
+                            <i style="cursor:pointer;color:green;" onclick="addElemento('#form');" class="fa-solid fa-circle-plus"></i>
+                            <i style="cursor:pointer;color:red;" onclick="restElemento('#form');" class="fa-solid fa-circle-minus"></i>
                         </div>
-                        <div class="establecimiento">
-                            <h4 contenteditable="true" placeholder="Escuela - Instituto"></h4>
-                            <p class="estado" contenteditable="true" placeholder="Estado"></p>
-                        </div>
-                        <div class="timeline_linea"></div>
                     </div>
                     <div class="form-item">
                         <div class="timeline_circulo"></div>
@@ -150,33 +119,6 @@
                             <h3 class="especialidad" contenteditable="true" placeholder="Especialidad o Carrera"></h3>
                             <p class="fecha" contenteditable="true" placeholder="Desde-Hasta"></p>
                         </div>
-                        
-                        <div class="establecimiento">
-                            <h4 contenteditable="true" placeholder="Escuela - Instituto"></h4>
-                            <p class="estado" contenteditable="true" placeholder="Estado"></p>
-                        </div>
-                        <div class="timeline_linea"></div>
-                    </div>
-                    <div class="form-item">
-                        <div class="timeline_circulo"></div>
-                        <div class="titulo">
-                            <h3 class="especialidad" contenteditable="true" placeholder="Especialidad o Carrera"></h3>
-                            <p class="fecha" contenteditable="true" placeholder="Desde-Hasta"></p>
-                        </div>
-                        
-                        <div class="establecimiento">
-                            <h4 contenteditable="true" placeholder="Escuela - Instituto"></h4>
-                            <p class="estado" contenteditable="true" placeholder="Estado"></p>
-                        </div>
-                        <div class="timeline_linea"></div>
-                    </div>
-                    <div class="form-item">
-                        <div class="timeline_circulo"></div>
-                        <div class="titulo">
-                            <h3 class="especialidad" contenteditable="true" placeholder="Especialidad o Carrera"></h3>
-                            <p class="fecha" contenteditable="true" placeholder="Desde-Hasta"></p>
-                        </div>
-                        
                         <div class="establecimiento">
                             <h4 contenteditable="true" placeholder="Escuela - Instituto"></h4>
                             <p class="estado" contenteditable="true" placeholder="Estado"></p>
@@ -184,26 +126,26 @@
                         <div class="timeline_linea"></div>
                     </div>
                 </section>
-                <section class="adicionales">
-                    <h2>Adicionales</h2>
-                    <div class="ad-item">
-                        <i class="fa-solid fa-circle-check"></i>
-                        <p contenteditable="true" placeholder="Habilidad - Pretencion- Disponibilidad"></p>
-                    </div>
-                    <div class="ad-item">
-                        <i class="fa-solid fa-circle-check"></i>
-                        <p contenteditable="true" placeholder="Habilidad - Pretencion- Disponibilidad"></p>
+
+
+                <section id="extras" class="adicionales">
+                    <div class="modulo-header">
+                        <h2>Adicionales</h2>
+                        <div class="control">
+                            <i style="cursor:pointer;color:green;" onclick="addElemento('#extras');" class="fa-solid fa-circle-plus"></i>
+                            <i style="cursor:pointer;color:red;" onclick="restElemento('#extras');" class="fa-solid fa-circle-minus"></i>
+                        </div>
                     </div>
                     <div class="ad-item">
                         <i class="fa-solid fa-circle-check"></i>
                         <p contenteditable="true" placeholder="Habilidad - Pretencion- Disponibilidad"></p>
                     </div>
                 </section>
+                <!--<input type="button" name="imprimir" value="Imprimir" onclick="window.print();">-->
                 
             </div>
             
     </main>
-
 </body>
 
 </html>
