@@ -2,7 +2,7 @@
 
 Crea tu CV online
 
--Puedes añadir una foto
--Puedes crear una Vcard con tus datos de contacto basicos
--Imprime los resultados
--Descaga el documento pdf
+-Puedes añadir una foto<br>
+-Puedes crear una VCard con tus datos<br>
+-Imprime los resultados<br>
+-Descaga el documento PDF
