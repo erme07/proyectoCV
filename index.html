@@ -11,30 +11,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
-    <script src="https://kit.fontawesome.com/768709101c.js" crossorigin="anonymous"></script>
-    <script src="js/script.js"></script>
+    
 </head>
 
-<body>
-    <main id="curriculum">
+<body class="container">
+     <main id="curriculum">
             <div class="lateral">
                 <section class="avatar">
                     <figure>
-                        <div title="Clic aquí para subir una foto" class="input-container">
+                        <div title="Subir una foto" class="input-container">
                             <i class="fa-solid fa-square-pen"></i>
-                            <input type="file" accept="image/png, image/jpeg, image/jpg" onchange="previewFile()"/>
+                            <input type="file" accept="image/png, image/jpeg, image/jpg" id="addImage"/>
                         </div>
                         <img id="fotoPerfil" src="img/avatar placeholder.jpg">
                     </figure>
-                    <h3>perfil</h3>
-                    <p contenteditable="true" placeholder="Ingrese su perfil profesional. Esto es lo primero que leerá un posible empleador y debe brindarle una descripción general de tus habilidades y experiencia. Un buen perfil debe ser conciso y directo."></p>
+                    <h3 contenteditable="true" placeholder="Sobre Mi"></h3>
+                    <p contenteditable="true" placeholder="Un resumen sobre su perfil profesional o personal, posiblemente sea lo primero que leeran los empleadores. Brinde una descripcion concisa y directa sobre sus habilidades o aptitudes"></p>
                 </section>
                 <section class="personal-data">
                     <h3>datos personales</h3>
-                    <div class="data-item">
-                        <p>Fecha de Nacimiento</p>
-                        <p contenteditable="true" placeholder="dd/mm/aa"></p>
-                    </div>
                     <div class="data-item">
                         <p>Nacionalidad</p>
                         <p contenteditable="true" placeholder="Atlanteano"></p>
@@ -43,7 +38,10 @@
                         <p>Residencia</p>
                         <p contenteditable="true" placeholder="Atlantis"></p>
                     </div>
-                    
+                    <div class="data-item">
+                        <p>Fecha de Nacimiento</p>
+                        <p contenteditable="true" placeholder="dd/mm/aa"></p>
+                    </div>
                 </section>
                 <section class="social-links">
                     <h3>links sociales</h3>
@@ -71,9 +69,10 @@
                         <i class="fa-solid fa-phone"></i>
                         <p contenteditable="true" placeholder="+55 1234123111"></p>
                     </div>
-                    <figure class="qr">
-                        <img src="img/contacto-qr.png" alt="">
-                    </figure>
+                    <div class="qrMarco">
+                        <img src="img/MarcoQR.png" alt="">
+                        <div class="qrContainer" id="codigoQR"></div>
+                    </div>
                 </section>
             </div>
             <div class="principal">
@@ -84,37 +83,39 @@
                 </section>
                 <section id="exp" class="experiencias">
                     <div class="modulo-header">
-                        <h2>Experiencias Previas</h2>
+                        <div class="icon-header">
+                            <i class="fa-solid fa-briefcase"></i>
+                            <h2>Experiencias Previas</h2>
+                        </div>
                         <div class="control">
-                            <i style="cursor:pointer;color:green;" onclick="addElemento('#exp');" class="fa-solid fa-circle-plus"></i>
-                            <i style="cursor:pointer;color:red;" onclick="restElemento('#exp');" class="fa-solid fa-circle-minus"></i>
+                            <i title="Añadir Experiencia" data-item="experiencia" data-value="add" class="fa-solid fa-circle-plus"></i>
+                            <i title="Quitar Experiencia" data-item="experiencia" data-value="remove" class="fa-solid fa-circle-minus"></i>
                         </div>
                     </div>
                     <div class="exp-item">
-                        <div class="timeline_circulo"></div>
                         <h3 class="puesto" contenteditable="true" placeholder="Puesto Laboral"></h3>
                         <div class="empresa">
                             <h4 contenteditable="true" placeholder="Empleador"></h4>
                             <p class="fecha" contenteditable="true" placeholder="Desde-Hasta"></p>
                         </div>
-                        
-                        <p class="texto" contenteditable="true" placeholder="Ingresa la descripción de su experiencia laboral. Incluya información relevante que demuestre a los empleadores potenciales cómo ha agregado valor en roles anteriores. Escribe sobre tus"></p>
-                        <div class="timeline_linea"></div>
+                        <p class="texto" contenteditable="true" placeholder="Ingrese una descripcion sobre la experiencia laboral. Incluya informacion relevante para los empleadores, siendo conciso y sin extenderse demasiado"></p>
                     </div>
-                    
                 </section>
                 
                 <section id="form" class="formacion">
                     
                     <div class="modulo-header">
-                        <h2>Formacion academica</h2>
+                        <div class="icon-header">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            <h2>Formacion academica</h2>
+                        </div>
+                        
                         <div class="control">
-                            <i style="cursor:pointer;color:green;" onclick="addElemento('#form');" class="fa-solid fa-circle-plus"></i>
-                            <i style="cursor:pointer;color:red;" onclick="restElemento('#form');" class="fa-solid fa-circle-minus"></i>
+                            <i title="Añadir Formacion" data-item="formacion" data-value="add" class="fa-solid fa-circle-plus"></i>
+                            <i title="Quitar Formacion" data-item="formacion" data-value="remove" class="fa-solid fa-circle-minus"></i>
                         </div>
                     </div>
                     <div class="form-item">
-                        <div class="timeline_circulo"></div>
                         <div class="titulo">
                             <h3 class="especialidad" contenteditable="true" placeholder="Especialidad o Carrera"></h3>
                             <p class="fecha" contenteditable="true" placeholder="Desde-Hasta"></p>
@@ -123,17 +124,19 @@
                             <h4 contenteditable="true" placeholder="Escuela - Instituto"></h4>
                             <p class="estado" contenteditable="true" placeholder="Estado"></p>
                         </div>
-                        <div class="timeline_linea"></div>
                     </div>
                 </section>
 
 
                 <section id="extras" class="adicionales">
                     <div class="modulo-header">
-                        <h2>Adicionales</h2>
+                        <div class="icon-adicional">
+                            <i class="fa-solid fa-circle-plus"></i>
+                            <h2 contenteditable="true" placeholder="Lista adicional"></h2>
+                        </div>
                         <div class="control">
-                            <i style="cursor:pointer;color:green;" onclick="addElemento('#extras');" class="fa-solid fa-circle-plus"></i>
-                            <i style="cursor:pointer;color:red;" onclick="restElemento('#extras');" class="fa-solid fa-circle-minus"></i>
+                            <i title="Añadir" data-item="adicional" data-value="add" class="fa-solid fa-circle-plus"></i>
+                            <i title="Quitar" data-item="adicional" data-value="remove" class="fa-solid fa-circle-minus"></i>
                         </div>
                     </div>
                     <div class="ad-item">
@@ -141,11 +144,73 @@
                         <p contenteditable="true" placeholder="Habilidad - Pretencion- Disponibilidad"></p>
                     </div>
                 </section>
-                <!--<input type="button" name="imprimir" value="Imprimir" onclick="window.print();">-->
-                
+                <i class="fa-solid fa-print" title="Imprimir" onclick="imprimir()"></i>
+                 <p id="demo"></p>
             </div>
             
     </main>
+    <aside class="left-sidebar">
+        <div class="sidebar-container">
+            <fieldset class="datos-personales">
+                <legend>Datos Personales</legend>
+                <input type="checkbox" name="datosPersonales" value="nacionalidad" ><label for="nacionalidad">Nacionalidad</label><br>
+                <input type="checkbox" name="datosPersonales" value="domicilio" ><label for="domicilio">Domicilio</label><br>
+                <input type="checkbox" name="datosPersonales" value="estado-civil" ><label for="estado-civil">Estado Civil</label><br>
+                <input type="checkbox" name="datosPersonales" value="fecha-nacimiento" ><label for="fecha-nacimiento">Fecha de Nacimiento</label><br>
+                <input type="checkbox" name="datosPersonales" value="edad" ><label for="edad">Edad</label><br>
+            </fieldset>
+            <fieldset>
+                <legend>Links Sociales</legend>
+                <input type="checkbox" name="socialLinks" value="instagram"><label title="Instagram" for="instagram"><i class="fa-brands fa-instagram"></i></label>
+                <input type="checkbox" name="socialLinks" value="facebook"><label title="Facebook" for="facebook"><i class="fa-brands fa-square-facebook"></i></label>
+                <input type="checkbox" name="socialLinks" value="twitter"><label title="Twitter" for="twitter"><i class="fa-brands fa-square-twitter"></i></label><br>
+                <input type="checkbox" name="socialLinks" value="linkedin"><label title="Linkedin" for="linkedin"><i class="fa-brands fa-linkedin"></i></label>
+                <input type="checkbox" name="socialLinks" value="github"><label title="Github" for="github"><i class="fa-brands fa-github"></i></label>
+                <input type="checkbox" name="socialLinks" value="web"><label title="Pagina Web" for="web"><i class="fa-solid fa-globe"></i></label>
+            </fieldset>
+            <fieldset>
+                <legend>Contacto</legend>
+                <input type="checkbox" name="contact" value="celular"><label title="Celular" for="celular"><i class="fa-solid fa-mobile-screen-button"></i></label>
+                <input type="checkbox" name="contact" value="telefono"><label title="Telefono" for="telefono"><i class="fa-solid fa-square-phone"></i></label>
+                <input type="checkbox" name="contact" value="correo"><label title="Email" for="correo"><i class="fa-regular fa-envelope"></i></label>
+            </fieldset>
+            <fieldset class="vcardQr">
+                <legend>Vcard QR</legend>
+                <input type="radio" name="vcard" id="vcard-si" checked="true" value="si"><label for="vcard-si">SI</label>
+                <input type="radio" name="vcard" id="vcard-no" value="no"><label for="vcard-no">NO</label>
+                <p contenteditable="true" placeholder="Nombre"></p>
+                <p contenteditable="true" placeholder="Apellido"></p>
+                <p contenteditable="true" placeholder="Correo"></p>
+                <p contenteditable="true" placeholder="Telefono"></p>
+                <p contenteditable="true" placeholder="Pagina Web"></p>
+                <button id="generarQr">Generar</button>
+            </fieldset>
+        </div>
+        
+    </aside>
+    <aside class="right-sidebar">
+        <div class="sidebar-container">
+            <fieldset>
+                <legend>Descripcion de Perfil</legend>
+                <div class="layout-perfil">
+                    <img data-state="select" data-layout="left" data-value="perfil" class="selected" src="img/perfil-a.jpg" alt="">
+                    <img data-layout="right"data-value="perfil" src="img/perfil-b.jpg" alt="">
+                </div>
+                
+            </fieldset>
+            <fieldset>
+                <legend>Links Sociales</legend>
+                <div class="layout-social">
+                    <img data-state="select" data-layout="left" data-value="social" class="selected" src="img/social-a.jpg" alt="">
+                    <img data-layout="right"data-value="social" src="img/social-b.jpg" alt="">
+                </div>
+            </fieldset>
+        </div>
+        
+    </aside>
+    <script src="https://kit.fontawesome.com/768709101c.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
